@@ -1,0 +1,133 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+  <title>{% block title %}Default{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  {% block includes %}{% endblock  %}
+
+<style>
+html, body{
+  height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer{
+  background: #333;
+  color: #eee;
+  font-size: 13px;
+  padding: 20px;
+  clear:both;
+  min-height: 155px;
+}
+
+ul.unstyled{
+  list-style: none;
+  padding: 0;
+}
+</style>
+</head>
+<body>
+<div class="container wrapper">
+
+  <div class="navbar navbar-default " role="navigation" id="main_navbar">
+    <div class="container">
+      
+      <button type="button" class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">Zahmy</a>
+      <!-- <img alt="Zahmy" src="{% static 'images/zahmy_logo.png' %}"> -->
+      
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">الرئيسية</a></li>
+          <li><a href="#">منتجاتنا </a></li>
+          <li><a href="#">خدماتنا </a></li>
+          <li><a href="#">الأحداث </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span> أكاديمية الزحمى</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">المقالات </a></li>
+              <li><a href="#">الخطط </a></li>
+              <li><a href="#">الخدمات </a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">شارك معنا </a></li>
+            </ul>
+          </li>
+          <li><a href="#">بطولات الزحمى </a></li>
+          <li><a href="#">من نحن </a></li>
+          <li><a href="#">إتصل بنا </a></li>
+        </ul>
+      
+      </div>
+
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="row">
+    {% block container %}{% endblock  %}
+  </div>
+
+  <div class="clearfix"></div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h6>About</h6>
+        <p>jydgs uef 
+          wfaeg argaegaegareag teagethbar
+          eeRGHRSYJ YRJHDHG
+        </p>
+      </div>
+      <div class="col-sm-2">
+        <h6>تابعنا</h6>
+        <ul class="unstyled">
+          <li><a href="#">fb</a></li>
+          <li><a href="#">tw</a></li>
+          <li><a href="#">yo</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <h6>تابعنا</h6>
+        <ul class="unstyled">
+          <li><a href="#">fb</a></li>
+          <li><a href="#">tw</a></li>
+          <li><a href="#">yo</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4"><p>جميع الحقوق محفوظة &copy; 2017 الزحمى</p></div>      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
