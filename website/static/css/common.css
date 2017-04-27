@@ -1,0 +1,34 @@
+html {
+    height: 100%;
+}
+body {
+    padding-top: 50px;
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+nav.navbar-inverse .navbar-toggle{
+    margin-left: 20px;
+}
+nav.navbar-inverse .navbar-nav>li>a, nav ul.dropdown-menu>li>a {
+    text-align: right;
+}
+nav.navbar-inverse .navbar-nav>li {
+    direction: rtl;
+}
+footer {
+    background: #333;
+    color: #eee;
+    font-size: 13px;
+    padding: 20px;
+    clear:both;
+    min-height: 155px;
+    margin-top: 30px;
+}
+ul.unstyled {
+    list-style: none;
+    padding: 0;
+}
