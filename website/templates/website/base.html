@@ -24,7 +24,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
 
@@ -36,10 +36,9 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#">الزحمى بيه<!--<img alt="Brand" src="{% static 'images/zahmy_logo.png' %}">--></a>
+        <a class="navbar-brand pull-left" href="#"><img alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a>
       
       </div><!--/.navbar-header -->
-				
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#">الرئيسية</a></li>
@@ -65,7 +64,10 @@
     </div>
   </nav>
 
-  <div class="container-fluid wrapper">
+
+    {% block header %}{% endblock  %}
+
+  <div class="container wrapper">
 
     {% block container %}{% endblock  %}
 		
@@ -77,27 +79,32 @@
 	  <div class="container">
       <div class="row">
         <div class="col-sm-4">
-        <h6>About</h6>
-        <p>jydgs uef 
-          wfaeg argaegaegareag teagethbar
-          eeRGHRSYJ YRJHDHG
-        </p>
+          <h6>About</h6>
+          <p>jydgs uef 
+            wfaeg argaegaegareag teagethbar
+            eeRGHRSYJ YRJHDHG
+          </p>
         </div>
         <div class="col-sm-2">
         <h6>تابعنا</h6>
-        <ul class="unstyled">
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">youtube</a></li>
-        </ul>
+          <ul class="unstyled">
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">youtube</a></li>
+          </ul>
         </div>
         <div class="col-sm-2">
-        <h6>تابعنا</h6>
-        <ul class="unstyled">
-          <li>number: +2-785614254</li>
-          <li>email: hfas@jhf.sfv</li>
-          <li>location: 53 hwrfg wrgsdj sgjlsg</li>
-        </ul>
+          <address>
+            <strong>Twitter, Inc.</strong><br>
+            1355 Market Street, Suite 900<br>
+            San Francisco, CA 94103<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+
+          <address>
+            <strong>Full Name</strong><br>
+            <a href="mailto:#">first.last@example.com</a>
+          </address>        
         </div>
         <div class="col-sm-4"><p>جميع الحقوق محفوظة &copy; 2017 الزحمى</p></div>      
       </div>

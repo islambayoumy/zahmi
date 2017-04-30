@@ -1,27 +1,22 @@
-html {
+html, body {
     height: 100%;
+    margin-right: 0px;
+    margin-right: 0px;
+    background: #000;
+    color: white;
 }
-body {
-    padding-top: 50px;
-    height: 100%;
+.navbar-brand>img{
+    max-width: 100px;
 }
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
 }
-nav.navbar-inverse .navbar-toggle{
-    margin-left: 20px;
-}
-nav.navbar-inverse .navbar-nav>li>a, nav ul.dropdown-menu>li>a {
-    text-align: right;
-}
-nav.navbar-inverse .navbar-nav>li {
-    direction: rtl;
-}
 footer {
-    background: #333;
-    color: #eee;
+    background: #eee;
+    color: #333;
     font-size: 13px;
     padding: 20px;
     clear:both;
@@ -31,4 +26,97 @@ footer {
 ul.unstyled {
     list-style: none;
     padding: 0;
+}
+
+/**********************/
+.navbar>.container .navbar-brand{
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    margin: auto;
+}
+nav.navbar-inverse .navbar-toggle{
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-top: 23px;
+}
+nav.navbar-inverse .navbar-nav>li {
+    direction: rtl;
+}
+
+/**********************/
+/**********************/
+/**********************/
+
+nav.navbar-inverse {
+    background: #eee;
+    border-color: #aaa;
+    border-radius: 0px;
+    margin: auto;
+    min-height: 80px;
+}
+
+nav.navbar-inverse .navbar-nav>li>a {
+    color: #777777;
+    background: #eee;
+    text-shadow: none;
+    margin-top: 21px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+nav.navbar-inverse .container{
+    background: #eee;
+}
+nav.navbar-inverse .navbar-nav>li>a:hover,
+nav.navbar-inverse .navbar-nav>li>a:focus {
+    color: #bf1a2b;
+    background: #eee;
+}
+nav.navbar-inverse .navbar-nav>.active>a,
+nav.navbar-inverse .navbar-nav>.active>a:hover,
+nav.navbar-inverse .navbar-nav>.active>a:focus {
+    color: #bf1a2b;
+    background: #eee;
+    box-shadow: none;
+}
+
+nav.navbar-inverse .navbar-toggle,
+nav.navbar-inverse .navbar-toggle:active {
+    background: #555555;
+}
+nav.navbar-inverse .navbar-toggle:hover,
+nav.navbar-inverse .navbar-toggle:focus {
+    background: #333333;
+}
+nav.navbar-inverse .navbar-toggle .icon-bar {
+    background: #eee;
+}
+nav.navbar-inverse .navbar-toggle:hover .icon-bar,
+nav.navbar-inverse .navbar-toggle:focus .icon-bar {
+    background: #eee;
+}
+
+nav.navbar-inverse .navbar-nav>li>a, nav ul.dropdown-menu>li>a {
+    text-align: right;
+}
+nav.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+nav.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #bf1a2b;
+    background: #eee;
+}
+nav.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
+nav.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
+nav.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #bf1a2b;
+    background: #eee;
+}
+.navbar-inverse .navbar-nav>.open>a, 
+.navbar-inverse .navbar-nav>.open>a:focus, 
+.navbar-inverse .navbar-nav>.open>a:hover{
+    background: #fff;
+    color: #bf1a2b;
+    box-shadow: none;
 }
