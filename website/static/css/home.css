@@ -2,33 +2,35 @@
     color: gray;
     margin-top: 10px;
 }
-.full {
-  padding: 0 !important;
-  margin: 0 auto !important;
-  background-size: cover;
-  overflow: hidden;
+.site-wrapper{
+    width: 100%;
+    min-height: 600px;
+    color: white;
+    background: transparent url('../images/zahmi1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 20px;
+    display: table;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
-.wide {
-  width: 100%;
-  height: auto;
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    padding: 30px;
+}
+.lead .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
-.logo {
-  color: #fff;
-  font-weight: 800;
-  font-size: 14pt;
-  padding: 25px;
-  text-align: center;
-}
-.line {
-  padding-top: 20px;
-  white-space: no-wrap;
-  overflow: hidden;
-  text-align: center;
-}
-@media (orientation: portrait) {
-  .full {
-    background-size: 200% auto;
-    background-position: top right;
-  }
-}
+/*************************/
+
+/*************************/
+
+
+

@@ -7,6 +7,8 @@
   <title>{% block title %}Default{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
@@ -36,7 +38,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand pull-left" href="#"><img alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a>
+        <a class="navbar-brand pull-left" href="#"><img class="img-circle" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a>
       
       </div><!--/.navbar-header -->
       <div class="collapse navbar-collapse" id="navbar">
@@ -57,7 +59,7 @@
           </ul>
           </li>
           <li><a href="#">بطولات الزحمى </a></li>
-          <li><a href="#">من نحن </a></li>
+          <li class="left-element"><a href="#">من نحن </a></li>
           <li><a href="#">إتصل بنا </a></li>
         </ul>
       </div><!--/.navbar-collapse -->
@@ -75,7 +77,23 @@
 	
 	<div class="clearfix"></div>
 
-  <footer>
+<div class="news">
+    <div class="container">
+      <div class="marquee-sibling"> الأخبار </div>
+      <div class="marquee">
+        <ul class="marquee-content-items">
+          <li>خبر 1</li>
+          <li>خبر 2</li>
+          <li>خبر 3</li>
+          <li>خبر 4</li>
+          <li>خبر 5</li>
+          <li>خبر 6</li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+  <footer>    
 	  <div class="container">
       <div class="row">
         <div class="col-sm-4">
