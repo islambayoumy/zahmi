@@ -13,16 +13,25 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/common.css' %}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+  <script src="{% static 'js/libraries/nicescroll.js' %}"></script>
   {% block includes %}{% endblock  %}
+<script>
+$(document).ready(
+
+  function() {$("html").niceScroll();}
+
+);
+</script>
 
 <style>
 </style>
+
 </head>
 <body>
 
@@ -38,72 +47,73 @@
           <span class="icon-bar"></span>
         </button>
 
+        <!--
         <a class="navbar-brand pull-left" href="#"><img class="img-circle" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a>
-      
+        -->
+
       </div><!--/.navbar-header -->
       <div class="collapse navbar-collapse" id="navbar">
+
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              شاركنا <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">تسجيل دخول </a></li>
+              <li><a href="#">إنشاء حساب </a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">تسجيل خروج </a></li>
+            </ul>
+          </li>
+        </ul>
+
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">الرئيسية</a></li>
+          <li class="active" id="home"><a href="{% url 'website:index' %}">الرئيسية</a></li>
           <li><a href="#">منتجاتنا </a></li>
           <li><a href="#">خدماتنا </a></li>
-          <li><a href="#">الأحداث </a></li>
+          <li id="events"><a href="{% url 'website:events' %}">الأحداث </a></li>
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span> أكاديمية الزحمى</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">المقالات </a></li>
-            <li><a href="#">الخطط </a></li>
-            <li><a href="#">الخدمات </a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">شارك معنا </a></li>
-          </ul>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span> أكاديمية الزحمى</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">المقالات </a></li>
+              <li><a href="#">الخطط </a></li>
+              <li><a href="#">الخدمات </a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">شارك معنا </a></li>
+            </ul>
           </li>
-          <li><a href="#">بطولات الزحمى </a></li>
-          <li class="left-element"><a href="#">من نحن </a></li>
-          <li><a href="#">إتصل بنا </a></li>
+          <li id="championship"><a href="{% url 'website:championship' %}">بطولات الزحمى </a></li>
+          <li id="about"><a href="{% url 'website:about' %}">من نحن </a></li>
+          <li id="contact"><a href="{% url 'website:contact' %}">إتصل بنا </a></li>
         </ul>
+
       </div><!--/.navbar-collapse -->
     </div>
   </nav>
 
+{% block header %}{% endblock  %}
 
-    {% block header %}{% endblock  %}
+<div class="container">
+  {% block container %}{% endblock  %}		
+</div> <!-- /container --> 
 
-  <div class="container wrapper">
+{% block container-fluid %}{% endblock  %}
 
-    {% block container %}{% endblock  %}
-		
-  </div> <!-- /container-fluid --> 
-	
-	<div class="clearfix"></div>
-
-<div class="news">
-    <div class="container">
-      <div class="marquee-sibling"> الأخبار </div>
-      <div class="marquee">
-        <ul class="marquee-content-items">
-          <li>خبر 1</li>
-          <li>خبر 2</li>
-          <li>خبر 3</li>
-          <li>خبر 4</li>
-          <li>خبر 5</li>
-          <li>خبر 6</li>
-        </ul>
-      </div>
-    </div>
-</div>
+<div class="clearfix"></div>
 
   <footer>    
 	  <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-5">
           <h6>About</h6>
           <p>jydgs uef 
             wfaeg argaegaegareag teagethbar
             eeRGHRSYJ YRJHDHG
           </p>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
         <h6>تابعنا</h6>
           <ul class="unstyled">
             <li><a href="#">facebook</a></li>
@@ -111,7 +121,7 @@
             <li><a href="#">youtube</a></li>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-4">
           <address>
             <strong>Twitter, Inc.</strong><br>
             1355 Market Street, Suite 900<br>
@@ -124,9 +134,25 @@
             <a href="mailto:#">first.last@example.com</a>
           </address>        
         </div>
-        <div class="col-sm-4"><p>جميع الحقوق محفوظة &copy; 2017 الزحمى</p></div>      
+      </div>
+      <hr>
+      <div class="row social-ico">
+        <div class="col-md-4 col-md-offset-4 text-center">
+          <ul class="social-network social-circle">
+              <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+          </ul>				
+				</div>
       </div>
 	  </div>
+    <div class="container-fluid copyrights">
+      <div class="row">
+        <div class="col-sm-12"><p class="text-center"><label>جميع الحقوق محفوظة &copy; 2017 الزحمى</label></p></div>
+        <div class="col-sm-12"><p class="text-center poweredby"><label>POWERED BY <i>1-2 Strategy</i></label></p></div>
+      </div>
+    </div>
 	</footer>
 
 </body>

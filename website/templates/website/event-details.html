@@ -1,0 +1,101 @@
+{% extends 'website/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}الحدث{% endblock %}
+
+{% block includes %}
+  <link rel="stylesheet" href="{% static 'css/event-details.css' %}">
+  <link rel="stylesheet" href="{% static 'css/lib/jquery.eeyellow.Timeline.css' %}">
+
+  <script>
+    $(document).ready(function () {
+      $(".nav li").removeClass("active");
+      $('#events').addClass('active');
+    });
+  </script>
+{% endblock  %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block container %}
+
+  <div class="page-header text-right">
+    <h1>محمد الزحمي ..  بطل إمارتي لكمال الاجسام</h1>
+    <p>26/11/2013 7:19 <span class="glyphicon glyphicon-time" aria-hidden="true"></span></p>
+  </div>
+
+    <div class="row content">
+      <div class="col-md-3">
+        <img class="img-responsive img-ads" src="https://placehold.it/250x550">
+      </div>
+      <div class="col-md-9">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" width="900" height="350" src="https://www.youtube.com/embed/Lrfr7n7uccs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="description">
+          تستطيع متابعة وتقييم أداء طلابك من خلال تطبيق تقويم عن طريق إنشاء الاختبارات من بين عشرات الآلاف من الأسئلة
+           التي توفرها تقويم، وتحديد ومعرفة مستوى الطلاب بشكلٍ دقيق من خلال التقارير الفورية التي يصدرها تقويم لكل طالب.
+        </p>
+        <p class="description">
+          يقوم تطبيق تقويم بمساعدة أولياء الأمور على متابعة المستوى والأداء الدراسي لأبنائهم بكل سهولة
+           ومن أي مكان وفي أي وقت من خلال التقارير الدقيقة والفورية التي تحدد أداء ومستوى كل طالب.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="VivaTimeline">
+        <dl>
+          <dt>مايو 2017</dt>                                    
+          <dd class="pos-left clearfix">
+            <div class="circ"></div>
+            <div class="time">فبراير 03</div>
+            <div class="events">
+              <div class="events-header">عنوان</div>
+              <div class="events-body">                              
+                <div class="events-footer">
+                  تفاصيل
+                </div>                                                       
+              </div>
+            </div>
+          </dd>   
+          <dt>فبراير 2017</dt>
+          <dd class="pos-right clearfix">
+            <div class="circ"></div>
+            <div class="time">يناير 21</div>
+            <div class="events">
+              <div class="events-header">عنوان</div>                                
+              <div class="events-body">                                                                                            
+                <div class="events-footer">
+                  تفاصيل
+                </div>                                                       
+              </div>
+            </div>
+          </dd>   
+          <dd class="pos-left clearfix">
+            <div class="circ"></div>
+            <div class="time">يناير 07</div>
+            <div class="events">
+              <div class="events-header">عنوان</div>                                
+              <div class="events-body">                                                                                            
+                <div class="events-footer">
+                  تفاصيل
+                </div>                                                       
+              </div>
+            </div>
+          </dd>   
+          <dt>يناير 2017</dt>                        
+        </dl>
+      </div>
+    </div>
+
+{% endblock %}

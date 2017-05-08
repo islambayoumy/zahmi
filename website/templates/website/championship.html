@@ -1,0 +1,84 @@
+{% extends 'website/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}بطولات الزحمى{% endblock %}
+
+{% block includes %}
+  <link rel="stylesheet" href="{% static 'css/championship.css' %}">
+  <script>
+    $(document).ready(function () {
+      $(".nav li").removeClass("active");
+      $('#championship').addClass('active');
+
+
+    });
+
+    
+  </script>
+{% endblock  %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block container %}
+
+<div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">من هو محمد الزحمى</h2>
+        <p class="lead">عبر بطل العالم في كمال الأجسام محمد الزحمي في لقاء مع سكاي نيوز عربية
+             عن فخره بأن يكون أول إماراتي يحقق هذه البطولة العالمية في تايلاند في الثامن من ديسمبر 2015.
+        </p>
+        <br>
+        <h2>البطولات الحاصل عليها: </h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <td><p>بطولة آسيا 2009 باتيا</p></td>
+                </tr>
+                <tr>
+                    <td><p>بطولة الفجيرة 2012</p></td>
+                </tr>
+                <tr>
+                    <td><p>بطولة تايلاند 2015</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive center-block" src="{% static 'images/who-zahmi.jpg' %}" alt="">
+    </div>
+</div>
+
+<hr>
+
+<div class="row gallery">
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z1.jpg' %}" /></div>
+    <div class="col-md-3"><img class="img-responsive" src="{% static 'images/gallery/z2.jpg' %}" /></div>
+    <div class="col-md-5"><img class="img-responsive" src="{% static 'images/gallery/z3.jpg' %}" /></div>
+</div>
+<div class="row gallery">
+    <div class="col-md-3"><img class="img-responsive" src="{% static 'images/gallery/z19.jpg' %}" /></div>
+    <div class="col-md-3"><img class="img-responsive" src="{% static 'images/gallery/z5.jpg' %}" /></div>
+    <div class="col-md-2"><img class="img-responsive" src="{% static 'images/gallery/z6.jpg' %}" /></div>
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z4.jpg' %}" /></div>
+</div>
+<div class="row gallery">
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z8.jpg' %}" /></div>
+    <div class="col-md-3"><img class="img-responsive" src="{% static 'images/gallery/z9.jpg' %}" /></div>
+    <div class="col-md-5"><img class="img-responsive" src="{% static 'images/gallery/z10.jpg' %}" /></div>
+</div>
+<div class="row gallery">
+    <div class="col-md-5"><img class="img-responsive" src="{% static 'images/gallery/z11.jpg' %}" /></div>
+    <div class="col-md-3"><img class="img-responsive" src="{% static 'images/gallery/z12.jpg' %}" /></div>
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z13.jpg' %}" /></div>
+</div>
+<div class="row gallery">
+    <div class="col-md-2"><img class="img-responsive" src="{% static 'images/gallery/z15.jpg' %}" /></div>
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z16.jpg' %}" /></div>
+    <div class="col-md-2"><img class="img-responsive" src="{% static 'images/gallery/z17.jpg' %}" /></div>
+    <div class="col-md-4"><img class="img-responsive" src="{% static 'images/gallery/z18.jpg' %}" /></div>
+</div>
+
+{% endblock %}

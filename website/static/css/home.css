@@ -1,11 +1,7 @@
-.jumbotron{
-    color: gray;
-    margin-top: 10px;
-}
 .site-wrapper{
     width: 100%;
     min-height: 600px;
-    color: white;
+    color: #111;
     background: transparent url('../images/zahmi1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,6 +11,7 @@
     display: table;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    margin-bottom: 0px;
 }
 .site-wrapper-inner {
     display: table-cell;
@@ -22,14 +19,103 @@
 }
 .inner {
     padding: 30px;
+    background-color: rgba(245, 245, 245, 0.2);
+    border-radius: 15px;
+}
+.inner .logo {
+    width: 120px;
+    text-align: center;
+    margin-top: 0;
+    overflow: hidden;
 }
 .lead .btn-lg {
     padding: 10px 20px;
     font-weight: bold;
 }
-
+/***********news**************/
+.news {
+  width: 100%;
+  background: #E95546;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: auto;
+  position: relative;
+  border-top: thin gray solid;
+  border-bottom: thin gray solid;
+  padding-bottom: 5px;
+}
+.slider h3 {
+    color: #333;
+    text-align: center;
+}
 /*************************/
-
+.products {
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+}
+.products-box {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.product-heading h3 {
+    padding-bottom: 5px;
+    color: #333;
+}
+.product-heading p {
+    padding-bottom: 15px;
+    font-size: 17px;
+    color: gray;
+}
+.products-box img {
+    padding-bottom: 20px;
+    margin: auto;
+    min-height: 470px;
+}
+.products-box p {
+    min-height: 60px;
+}
+.product-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #888f94;
+}
+.fh5co-pricing .pricing-plan span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #d5d8db;
+}
+.products-box .price {
+  font-size: 72px;
+  color: #6d6d6d;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.products-box .price .currency {
+  font-size: 30px;
+  top: -0.9em;
+  padding-right: 10px;
+}
+.products-box .price small {
+  font-size: 13px;
+  display: block;
+  text-transform: uppercase;
+  color: #888f94;
+}
 /*************************/
 
 

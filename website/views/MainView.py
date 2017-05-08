@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect, redirect
 
-def home(request):
+
+def index(request):
     return render(request, 'website/home.html')
 
 def about(request):

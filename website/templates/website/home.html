@@ -6,58 +6,129 @@
 
 {% block includes %}
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        vertical: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 300
+      });
+    });
+ </script>
 {% endblock  %}
 
 {% block header %}
 
   <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-          <div class="col-lg-2"></div>
-          <div class="cover-container col-lg-8">
-              <div class="inner">
-                  <h1 class="cover-heading">Cover your page.</h1>
-                  <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-                  <p class="lead">
-                      <a href="#" class="btn btn-lg btn-default">Learn more</a>
-                  </p>
+    <div class="site-wrapper-inner">
+      <div class="col-lg-2"></div>
+      <div class="cover-container col-lg-8">
+          <div class="inner">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <img class="logo" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}">
               </div>
+            </div>
+            <h1 class="cover-heading">Cover your page.</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
           </div>
-          <div class="col-lg-2"></div>            
       </div>
+      <div class="col-lg-2"></div>            
+    </div>
   </div>
+
+    <div class="news">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="slider">
+          <h3>الخبر الأول</h3>
+          <h3>الخبر الثانى الخبر الثانى</h3>
+          <h3>الخبر الثالث الخبر الثالث الخبر الثالث</h3>
+          <h3>الخبر الرابع الخبر الرابع الخبر الرابع الخبر الرابع</h3>
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
 
 {% block container %}
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-
-    </div>
-  </div> <!-- /jumbotron -->
-		
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-warning" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-danger" href="#" role="button">View details &raquo;</a></p>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading-section text-center product-heading">
+        <h2>منتجاتنا الأكثر مبيعا</h2>
+        <p>تعرّف على اكثر منتجاتنا مبيعا وإنتشارا</p>
       </div>
     </div>
-  </div> <!-- /container -->
+  </div>
+
+  <div class="row">
+    <div class="products">
+      <div class="col-md-4">
+        <div class="products-box">
+          <h2 class="product-title">Whey Golden Standard</h2>
+          <img class="img-responsive" alt="" src="{% static 'images/whey-golden-standard.jpg' %}">
+          <div class="price"><sup class="currency">$</sup>14.8</div>
+          <p>Muscle Building Whey Protein Powder*<br>24g of Whey Protein with Amino Acids for Muscle Recovery and Growth*</p>
+          <a href="#" class="btn btn-info">إشترى الآن</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="products-box">
+          <h2 class="product-title">LeanMode</h2>
+          <img class="img-responsive" alt="" src="{% static 'images/leanmode.jpg' %}">
+          <div class="price"><sup class="currency">$</sup>6.99</div>
+          <p>Stimulant Free Fat Loss Support*<br>5 Stimulant Free Modes Of Fat Burning*</p>
+          <a href="#" class="btn btn-info">إشترى الآن</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="products-box">
+          <h2 class="product-title">Combat</h2>
+          <img class="img-responsive" alt="" src="{% static 'images/combat.jpg' %}">
+          <div class="price"><sup class="currency">$</sup>25.99</div>
+          <p>Protein Powder Blend for Muscle Growth*<br>Loaded with a Variety of Proteins to Feed Muscles for up to 8 Hours*</p>
+          <a href="#" class="btn btn-info">إشترى الآن</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <hr>
+
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-3">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-danger" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-3">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-warning" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-3">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-3">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
 
 {% endblock %}
 
