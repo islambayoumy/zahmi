@@ -47,9 +47,8 @@ $(document).ready(
           <span class="icon-bar"></span>
         </button>
 
-        <!--
-        <a class="navbar-brand pull-left" href="#"><img class="img-circle" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a>
-        -->
+        
+        
 
       </div><!--/.navbar-header -->
       <div class="collapse navbar-collapse" id="navbar">
@@ -69,6 +68,7 @@ $(document).ready(
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand pull-right" href="{% url 'website:index' %}"><img class="img-brand" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a></li>
           <li class="active" id="home"><a href="{% url 'website:index' %}">الرئيسية</a></li>
           <li><a href="#">منتجاتنا </a></li>
           <li><a href="#">خدماتنا </a></li>
@@ -90,6 +90,7 @@ $(document).ready(
         </ul>
 
       </div><!--/.navbar-collapse -->
+
     </div>
   </nav>
 

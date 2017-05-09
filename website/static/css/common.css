@@ -13,7 +13,7 @@ html, body {
 hr {
     border-color: #444;
 }
-.navbar-brand>img{
+.nav>li>a>img{
     max-width: 100px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -21,7 +21,7 @@ hr {
 .navbar>.container .navbar-brand{
     padding: 0px;
     padding-top: 10px;
-    padding-bottom: 80px;
+    padding-bottom: 90px;
     margin: auto;
 }
 nav.navbar-inverse .navbar-toggle{
@@ -48,7 +48,7 @@ nav.navbar-inverse .navbar-nav>li>a {
     background: #171717;
     text-shadow: none;
     margin-top: 21px;
-    font-size: 20px !important;
+    font-size: 19px !important;
 }
 
 nav.navbar-inverse .container{
@@ -164,7 +164,6 @@ nav.navbar-inverse .navbar-nav>li>a, nav ul.dropdown-menu>li>a {
     }
 }
 /**********************/
-
 
 /******* footer *******/
 footer {

@@ -1,8 +1,9 @@
 .site-wrapper{
     width: 100%;
     min-height: 600px;
-    color: #111;
-    background: transparent url('../images/zahmi1.jpg') no-repeat center center fixed;
+    color: #eee;
+    text-shadow: 0 0 5px #333;
+    background: transparent url('../images/Zahmi1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,18 +20,20 @@
 }
 .inner {
     padding: 30px;
-    background-color: rgba(245, 245, 245, 0.2);
+    background-color: rgba(245, 245, 245, 0.3);
     border-radius: 15px;
 }
-.inner .logo {
-    width: 120px;
-    text-align: center;
-    margin-top: 0;
-    overflow: hidden;
+.inner h1 {
+    padding-bottom: 5px;
+}
+.inner p {
+    text-align: right;
+    direction: rtl;
 }
 .lead .btn-lg {
     padding: 10px 20px;
     font-weight: bold;
+    direction: rtl;
 }
 /***********news**************/
 .news {
