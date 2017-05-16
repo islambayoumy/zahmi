@@ -1,7 +1,7 @@
 .site-wrapper{
     width: 100%;
     min-height: 600px;
-    color: #eee;
+    color: #000;
     text-shadow: 0 0 5px #333;
     background: transparent url('../images/Zahmi1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;

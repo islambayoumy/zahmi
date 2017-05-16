@@ -47,9 +47,6 @@ $(document).ready(
           <span class="icon-bar"></span>
         </button>
 
-        
-        
-
       </div><!--/.navbar-header -->
       <div class="collapse navbar-collapse" id="navbar">
 
@@ -68,9 +65,9 @@ $(document).ready(
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="navbar-brand pull-right" href="{% url 'website:index' %}"><img class="img-brand" alt="Zahmi" src="{% static 'images/zahmy_logo.png' %}"></a></li>
+          <li><a class="navbar-brand pull-right" id="logo" href="{% url 'website:index' %}"><img class="img-brand" alt="Zahmi" src="{% static 'images/zahmy_logo_sm.png' %}"></a></li>
           <li class="active" id="home"><a href="{% url 'website:index' %}">الرئيسية</a></li>
-          <li><a href="#">منتجاتنا </a></li>
+          <li id="store"><a href="{% url 'website:store' %}">منتجاتنا </a></li>
           <li><a href="#">خدماتنا </a></li>
           <li id="events"><a href="{% url 'website:events' %}">الأحداث </a></li>
           <li class="dropdown">
